@@ -1,0 +1,20 @@
+<!-- Fixed navbar -->
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <%= I18n.locale.eql?(:en) ? link_to("French", 'http://lingualinterrupteur.fr:3000')
+            : link_to("English", 'http://lingualswitch.en:3000') %>
+      </button>
+      <%= link_to "LingualSwitch", root_path, class: "navbar-brand" %>
+
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav pull-right">
+        <%= I18n.locale.eql?(:en) ? link_to(image_tag('fr.jpg', class: "navbar-brand"), 'http://lingualinterrupteur.fr:3000')
+            : link_to(image_tag('eng.png', class: "navbar-brand"), 'http://lingualswitch.en:3000') %>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div>
+</nav>
